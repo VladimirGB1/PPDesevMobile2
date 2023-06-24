@@ -1,0 +1,14 @@
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import MovieDetailsPage from '../pages/MovieDetailsPage';
+import MoviesPage from '../pages/MoviesPage';
+
+const Stack = createNativeStackNavigator();
+
+export default function AppRoutes(){
+    return(
+        <Stack.Navigator>
+            <Stack.Screen name='MoviesPage' component={MoviesPage} options={{headerShown: false}}/>  
+            <Stack.Screen name='DetailsPage' component={MovieDetailsPage} />
+        </Stack.Navigator>
+    );
+}
